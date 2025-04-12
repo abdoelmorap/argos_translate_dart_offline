@@ -63,6 +63,7 @@ This will translate your localization file from English to Arabic.
 - Python 3.7 or higher
 - [argos-translate](https://pypi.org/project/argostranslate/) Python package
 
+
 ## Project Structure
 
 ```
@@ -89,4 +90,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-If you encounter any issues or have questions, please file an issue on the [GitHub repository](https://github.com/abdoelmorap/remove_unused_localizations_keys/issues).
+If you encounter any issues or have questions, please file an issue on the [GitHub repository](https://github.com/abdoelmorap/argos_translator_offline/issues).
+
+## Dependencies
+
+This package uses the following dependencies:
+- [ffi](https://pub.dev/packages/ffi) - For foreign function interface
+- [path](https://pub.dev/packages/path) - For path manipulation

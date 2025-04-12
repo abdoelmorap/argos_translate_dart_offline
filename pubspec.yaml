@@ -4,20 +4,17 @@ version: 0.0.1
 homepage: https://github.com/abdoelmorap/argos_translatetor_offline
 repository: https://github.com/abdoelmorap/argos_translatetor_offline
 issue_tracker: https://github.com/abdoelmorap/argos_translatetor_offline/issues
+publish_to: https://pub.dev/publishers/abdelrhmantolba.online
 
-publisher:
-  name: abdelrhmantolba.online
-  email: AbdelrahmanTolba@protonmail.com
-  website: https://abdelrhmantolba.online
-  country: EG
+
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
 # Add regular dependencies here.
 dependencies:
-  ffi: 
-  path: 
+  ffi: ^2.0.0
+  path: ^1.8.0
 assets:
   - dlls/argos_bridge.dll
 screenshots:
@@ -26,5 +23,5 @@ screenshots:
 executables:
   argos_translate_dart: argos_translate_dart
 dev_dependencies:
-  lints:
-  test: 
+  lints: ^2.0.0
+  test: ^1.17.0
