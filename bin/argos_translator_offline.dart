@@ -26,11 +26,10 @@ void main(List<String> args) async {
     final extension = path.extension(filePath).toLowerCase();
     final isArb = extension == '.arb';
 
-    // Load DLL
-    final libraryPath =
-        path.join(Directory.current.path, 'dlls', 'argos_bridge.dll');
-    print('🔄 Loading library from: $libraryPath');
-    ArgosTranslate.initialize(libraryPath);
+    final tempDllFile = await ArgosTranslate.findDllPath();
+    final dllPath = tempDllFile;
+    print('🔄 Loading library from: $dllPath');
+    ArgosTranslate.initialize(dllPath);
 
     // Install language package
     print('🌐 Installing $fromLang → $toLang translation package...');
@@ -67,6 +66,7 @@ void main(List<String> args) async {
       flush: true,
     );
     print('✅ Translation saved to $outputPath');
+
     exit(0);
   } catch (e, stackTrace) {
     print('❌ Error: $e');

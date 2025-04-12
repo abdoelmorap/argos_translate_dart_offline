@@ -1,6 +1,5 @@
-import 'package:remove_unused_localizations_keys/remove_unused_localizations_keys.dart';
+import 'package:argos_translator_offline/argos_translator_offline.dart';
 
 void main() {
-  // Running the localization cleaner function
-  runLocalizationCleaner();
+  final translatedText = ArgosTranslate.translate(original, fromLang, toLang);
 }

@@ -9,4 +9,5 @@
 - Improve Docs .
 - ## 0.0.2
 
-- Improvement CLI .
+- ## 1.2.0
+- Improvement CLI & dll finding .

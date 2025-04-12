@@ -34,7 +34,7 @@ Add this package to your `pubspec.yaml` under dev_dependencies:
 
 ```yaml
 dev_dependencies:
-  argos_translator_offline: ^0.0.4
+  argos_translator_offline: ^1.2.0
 ```
 
 Then run:
