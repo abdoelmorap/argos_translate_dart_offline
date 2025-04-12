@@ -4,7 +4,7 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 [![Pub Version](https://img.shields.io/pub/v/argos_translator_offline)](https://pub.dev/packages/argos_translator_offline)
 
-A Flutter package for offline and free automatic translation of localization keys from `.arb` and `.json` files.
+A Flutter package for offline and free automated translation of localization keys from `.arb` and `.json` files.
 
 ## Features
 
@@ -16,10 +16,12 @@ A Flutter package for offline and free automatic translation of localization key
 
 ## Prerequisites
 
-1. Install Python (3.7 or higher)
+1. Install Python (3.7 or higher) - Recommended to use Python 3.11 which it's latest supported one for  sentencepiece & argostranslate
+[Download Python 3.11](https://www.python.org/downloads/release/python-3110/) 
 2. Install argos-translate using pip:
 ```bash
-pip install argostranslate
+pip install sentencepiece  
+pip install argostranslate    
 ```
 
 For more information about argos-translate, visit:
@@ -32,7 +34,7 @@ Add this package to your `pubspec.yaml` under dev_dependencies:
 
 ```yaml
 dev_dependencies:
-  argos_translator_offline: ^0.0.1
+  argos_translator_offline: ^0.0.4
 ```
 
 Then run:
@@ -60,7 +62,8 @@ This will translate your localization file from English to Arabic.
 
 - Dart SDK >= 3.0.0
 - Flutter SDK (latest version recommended)
-- Python 3.7 or higher
+- Python 3.7 or higher - Recommended to use Python 3.11 which it's latest supported one for  sentencepiece & argostranslate
+  [Download Python 3.11](https://www.python.org/downloads/release/python-3110/)
 - [argos-translate](https://pypi.org/project/argostranslate/) Python package
 
 
