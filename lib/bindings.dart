@@ -19,10 +19,11 @@ class ArgosBindings {
   ArgosBindings(String libraryPath) {
     try {
       lib = DynamicLibrary.open(libraryPath);
-      _translateText = lib.lookupFunction<TranslateTextNative, TranslateText>(
-          'translate_text');
-      _installPackage = lib.lookupFunction<InstallPackageNative, InstallPackage>(
-          'install_language_package');
+      _translateText = lib
+          .lookupFunction<TranslateTextNative, TranslateText>('translate_text');
+      _installPackage =
+          lib.lookupFunction<InstallPackageNative, InstallPackage>(
+              'install_language_package');
     } catch (e) {
       print('Error loading library: $e');
       rethrow;
@@ -33,7 +34,7 @@ class ArgosBindings {
     final textPtr = text.toNativeUtf8();
     final fromPtr = fromCode.toNativeUtf8();
     final toPtr = toCode.toNativeUtf8();
-    
+
     try {
       final resultPtr = _translateText(textPtr, fromPtr, toPtr);
       final result = resultPtr.toDartString();
@@ -49,7 +50,7 @@ class ArgosBindings {
   Future<int> installPackage(String fromCode, String toCode) async {
     final fromPtr = fromCode.toNativeUtf8();
     final toPtr = toCode.toNativeUtf8();
-    
+
     try {
       return _installPackage(fromPtr, toPtr);
     } finally {

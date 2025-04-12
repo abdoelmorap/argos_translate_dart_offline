@@ -27,7 +27,8 @@ void main(List<String> args) async {
     final isArb = extension == '.arb';
 
     // Load DLL
-    final libraryPath = path.join(Directory.current.path, 'dlls', 'argos_bridge.dll');
+    final libraryPath =
+        path.join(Directory.current.path, 'dlls', 'argos_bridge.dll');
     print('🔄 Loading library from: $libraryPath');
     ArgosTranslate.initialize(libraryPath);
 
@@ -53,18 +54,20 @@ void main(List<String> args) async {
       }
 
       final original = value.toString();
-      final translatedText = ArgosTranslate.translate(original, fromLang, toLang);
+      final translatedText =
+          ArgosTranslate.translate(original, fromLang, toLang);
       translated[key] = translatedText;
     }
 
     // Save translated content
-    final outputPath = path.join(path.dirname(filePath), 'translated_${toLang}${extension}');
+    final outputPath =
+        path.join(path.dirname(filePath), 'translated_${toLang}${extension}');
     await File(outputPath).writeAsString(
       JsonEncoder.withIndent('  ').convert(translated),
       flush: true,
     );
     print('✅ Translation saved to $outputPath');
-exit(0);
+    exit(0);
   } catch (e, stackTrace) {
     print('❌ Error: $e');
     print(stackTrace);

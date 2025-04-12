@@ -90,10 +90,58 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-If you encounter any issues or have questions, please file an issue on the [GitHub repository](https://github.com/abdoelmorap/argos_translator_offline/issues).
+If you encounter any issues or have questions, please file an issue on the [GitHub repository](https://github.com/abdoelmorap/argos_translate_dart_offline/issues).
 
 ## Dependencies
 
 This package uses the following dependencies:
 - [ffi](https://pub.dev/packages/ffi) - For foreign function interface
 - [path](https://pub.dev/packages/path) - For path manipulation
+
+
+
+## API Documentation
+
+The package provides the following public API members:
+
+### ArgosTranslate Class
+
+The main class that provides offline translation capabilities.
+
+#### Methods
+
+- `initialize(String libraryPath)`: Initializes the Argos Translate library with the specified DLL path.
+  ```dart
+  ArgosTranslate.initialize('path/to/argos_bridge.dll');
+  ```
+
+- `translate(String text, String fromCode, String toCode)`: Translates text from one language to another.
+  ```dart
+  String translated = ArgosTranslate.translate('Hello', 'en', 'ar');
+  ```
+
+- `installPackage(String fromCode, String toCode)`: Installs a language package for translation between two languages.
+  ```dart
+  await ArgosTranslate.installPackage('en', 'ar');
+  ```
+
+### Documentation Requirements
+
+When contributing to this package, please ensure all public API members are properly documented. The package uses the `public_member_api_docs` lint rule to enforce documentation standards. Each public member should include:
+
+- A clear description of its purpose
+- Parameter descriptions with examples
+- Return value descriptions where applicable
+- Exception information where relevant
+
+Example of proper documentation:
+```dart
+/// Translates text from one language to another.
+///
+/// [text] - The text to translate.
+/// [fromCode] - The source language code (e.g., 'en' for English).
+/// [toCode] - The target language code (e.g., 'ar' for Arabic).
+///
+/// Returns the translated text as a String.
+static String translate(String text, String fromCode, String toCode)
+```

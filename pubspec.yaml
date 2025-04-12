@@ -1,10 +1,9 @@
 name: argos_translator_offline
 description: "A Flutter package to auto translate localization keys from .arb files. and .json file offline and free"
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/abdoelmorap/argos_translatetor_offline
 repository: https://github.com/abdoelmorap/argos_translatetor_offline
 issue_tracker: https://github.com/abdoelmorap/argos_translatetor_offline/issues
-publish_to: https://pub.dev/publishers/abdelrhmantolba.online
 
 
 
